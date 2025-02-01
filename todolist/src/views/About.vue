@@ -1,9 +1,13 @@
 <template>
-<h1>about</h1>
+    <h1>about</h1>
 </template>
-<script>
 
+<script>
+    export default{
+        name: "About-main",
+    }
 </script>
+
 <style>
 
 </style>

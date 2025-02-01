@@ -1,9 +1,16 @@
 <template>
-<h1>home</h1>
+    
+    <h1>home</h1>
 </template>
-<script>
 
+<script>
+    export default{
+        name: "Home-main",
+        components: {
+        }
+    }
 </script>
+
 <style>
 
 </style>
