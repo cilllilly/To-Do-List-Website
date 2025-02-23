@@ -1,7 +1,7 @@
 <template>
   <div class = "container">
-    <Header title = "To Do List"/>
-    <router-view></router-view>
+    <Header @toggle-add-task = "toggleAddTask" title = "To Do List" :showAddTask = "showAddTask"/>
+    <router-view :showAddTask = "showAddTask"></router-view>
     <Footer/>
   </div>
 </template>
@@ -14,6 +14,16 @@ import Footer from './components/Footer.vue'
     components: {
       Header, 
       Footer,
+    },
+    data(){
+      return {
+        showAddTask: false,
+      }
+    },
+    methods:{
+      toggleAddTask(){
+        this.showAddTask = !this.showAddTask;
+      }
     }
   }
 </script>

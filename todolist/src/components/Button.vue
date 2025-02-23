@@ -17,11 +17,11 @@
     }
 </script>
 
-<style>
+<style scoped>
     .btn{
         display: inline-block;
         border: none;
         padding: 10px 30px;
-
+        color: white;
     }
 </style>
