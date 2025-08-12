@@ -3,7 +3,7 @@
         <p>
             By: Cillian Moore! &copy; 2025
         </p>
-        <router-link to = "/about" class = "link">About</router-link>
+        <router-link @click = "$emit('header-off')" to = "/about" class = "link"><button>About</button></router-link>
     </footer>
 </template>
 

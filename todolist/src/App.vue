@@ -1,8 +1,9 @@
 <template>
+  <router-link  to = "/signup"><button>sign up</button></router-link>
   <div class = "container">
-    <Header @toggle-add-task = "toggleAddTask" title = "To Do List" :showAddTask = "showAddTask"/>
+    <Header @toggle-add-task = "toggleAddTask" title = "To Do List" :showAddTask = "showAddTask" v-if="showHeader"/>
     <router-view :showAddTask = "showAddTask"></router-view>
-    <Footer/>
+    <Footer @header-off = "headerOff"/>
   </div>
 </template>
 
@@ -18,11 +19,22 @@ import Footer from './components/Footer.vue'
     data(){
       return {
         showAddTask: false,
+        showHeader: true,
       }
     },
     methods:{
       toggleAddTask(){
         this.showAddTask = !this.showAddTask;
+      },
+      headerOn(){
+        this.showHeader = true;
+        setTimeout(() => {
+          //reloads the main page when the main page loads. 
+          location.reload();
+        },1)
+      },
+      headerOff(){
+        this.showHeader = false;
       }
     }
   }

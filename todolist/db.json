@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {
+      "id": "2fa4",
+      "text": "homework",
+      "date": {
+        "day": 27,
+        "month": "June",
+        "year": 2025
+      },
+      "reminder": false,
+      "done": false,
+      "sent": false
+    }
+  ],
+  "users": []
+}
